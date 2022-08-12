@@ -10,7 +10,99 @@ const recipes = [
     {
         title: "Recipe!!!!!!!!!!!!",
         ingridients: ["курица", "сыр", "картофель"]
-    }
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
+    {
+        title: "Recipe!!!!!!!!!!!!",
+        ingridients: ["курица", "сыр", "картофель"]
+    },
 ]
 
 module.exports = {
