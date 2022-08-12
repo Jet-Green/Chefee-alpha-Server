@@ -7,9 +7,13 @@ const app = express()
 
 app.use(cors())
 
-app.get('/', (req, res) => {
-    res.send('hi')
-})
+
+const recipeFuncs = require('./functions/recipes')
+
+app.get('/recipes/get-all', recipeFuncs.getAll)
+
+
+
 
 app.listen(PORT, () => {
     console.log(`app is listening on http://localhost:${PORT}`);
