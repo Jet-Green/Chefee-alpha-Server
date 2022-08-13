@@ -1,4 +1,4 @@
-const { User } = require('../mongo')
+const { User } = require('../mongo/schemas')
 
 module.exports = {
     registerUser: (req, res) => {
@@ -10,7 +10,7 @@ module.exports = {
                 let userData = req.body;
 
                 const newUser = new User({
-                    username: userData.username,
+                    name: userData.name,
                     email: userData.email,
                     password: userData.password
                 })
@@ -18,5 +18,19 @@ module.exports = {
                 newUser.save()
                 return res.status(200).send('OK')
             })
+    },
+    authentificateUser: (req, res) => {
+        let data = req.body;
+        User.findOne({ email: data.email }, function (err, user) {
+            if (user) {
+                // test a matching password
+                user.comparePassword(data.password, function (err, isMatch) {
+                    console.log(data.password, isMatch); // -> Password123: true
+                    res.json({ correct: isMatch });
+                });
+            } else {
+                res.json({ correct: false });
+            }
+        });
     }
 }

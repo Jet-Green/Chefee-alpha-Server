@@ -8,7 +8,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-const { connectMongo } = require('./mongo')
+const { connectMongo } = require('./mongo/mongo')
 connectMongo()
 
 
@@ -19,7 +19,7 @@ app.get('/recipes/get-all', recipeFuncs.getAll)
 
 const userFuncs = require('./functions/users')
 app.post('/users/register', userFuncs.registerUser)
-
+app.post('/users/auth', userFuncs.authentificateUser)
 
 
 app.listen(PORT, () => {
