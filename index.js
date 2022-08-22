@@ -14,7 +14,7 @@ connectMongo()
 
 const recipeFuncs = require('./functions/recipes')
 app.get('/recipes/get-all', recipeFuncs.getAll)
-
+app.get('/recipes/get', recipeFuncs.getById)
 
 
 const userFuncs = require('./functions/users')

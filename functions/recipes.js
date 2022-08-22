@@ -1,5 +1,6 @@
 const recipes = [
     {
+        id: 1,
         author: 'Савелий супер повар',
         title: "Лапша Японская",
         ingredients: ["Лапша", "Репчатый лук", "Куриное яйцо", "Куриное филе", "Рис", "Болгарский перец", "Морковь"],
@@ -11,11 +12,12 @@ const recipes = [
         comments: 102,
         firstComment: {
             author: 'Гриша Дзюин',
-            text: 'Мне не понравилось и очень дорого получается'
+            text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolores odit placeat laudantium, voluptates inventore assumenda consequatur maxime ad tempora numquam non doloribus veniam ipsa velit! Quibusdam rerum officiis ducimus.'
         },
         description: "Оякодон — разновидность традиционного японского блюда донбури, представляющего собой круглую чашу с рисом, дополненную различными ингредиентами, от куска свинины или говядины до угря. Если верить источникам, оякодон придумали в Осаке около 1900 года, бросив на рис кусочки курицы с весенним луком и залив их яйцом. Название блюда, к слову, буквально означает на японском «мать и дитя». Кстати, готовить оякодон можно не только с курицей, с говядиной тоже вкусно. И еще это не только завтрак — он может быть и обедом, и ужином."
     },
     {
+        id: 2,
         author: 'Савелий супер повар',
         title: "Лапша Японская",
         ingredients: ["Лапша", "Репчатый лук", "Куриное яйцо", "Куриное филе", "Рис", "Болгарский перец", "Морковь"],
@@ -36,5 +38,8 @@ const recipes = [
 module.exports = {
     getAll: (req, res) => {
         res.send(recipes)
+    },
+    getById: (req, res) => {
+        res.send(recipes.find((rec) => rec.id == req.query.id))
     }
 }
