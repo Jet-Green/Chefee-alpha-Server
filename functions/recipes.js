@@ -35,11 +35,34 @@ const recipes = [
     },
 ]
 
+function isInIngrs(ingrs, req) {
+    for (let ingr of ingrs) {
+        if (ingr.toLowerCase().includes(req))
+            return true;
+    }
+    return false;
+}
+
 module.exports = {
     getAll: (req, res) => {
         res.send(recipes)
     },
     getById: (req, res) => {
         res.send(recipes.find((rec) => rec.id == req.query.id))
+    },
+    getByStr: (req, res) => {
+        let result = []
+        let request = req.query.request.toLowerCase()
+        for (let rec of recipes) {
+            if (rec.title.toLowerCase().includes(request)
+                ||
+                rec.author.toLowerCase().includes(request)
+                ||
+                isInIngrs(rec.ingredients, request)
+            ) {
+                result.push(rec);
+            }
+        }
+        res.send(result)
     }
 }
