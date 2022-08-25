@@ -7,7 +7,7 @@ const recipes = [
         ingredients: ["1 стакан Круглозёрный Рис", '4 ст. л. Соевый соус', "1 Репчатый лук", "5 Куриное яйцо", '4 ст. л. мирина (или полусладкого белого вина)', 'Ростки сои'],
         portions: 4,
         time: "1 ч 30 минут",
-        healthIndex: 7.5,
+        healthIndex: null,
         likes: 423,
         reposts: 12,
         comments: 102,
