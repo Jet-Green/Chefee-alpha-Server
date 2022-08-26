@@ -1,18 +1,17 @@
-const PORT = '3300'
-
+require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
-const authRouter = require('./authRouter')
+const cookieParser = require('cookie-parser')
+const mongoose = require('mongoose');
+const router = require('./router/index')
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
+app.use(cookieParser())
 
-app.use('/auth', authRouter)
-
-const { connectMongo } = require('./mongo/mongo')
-connectMongo()
+app.use('/api', router)
 
 
 const recipeFuncs = require('./functions/recipes')
@@ -21,11 +20,23 @@ app.get('/recipes/get', recipeFuncs.getById)
 app.get('/recipes/get-by-str-request', recipeFuncs.getByStr)
 
 
-const userFuncs = require('./functions/users')
 // app.post('/users/register', userFuncs.registerUser)
 // app.post('/users/auth', userFuncs.authentificateUser)
 
+const PORT = process.env.PORT || '3300'
 
-app.listen(PORT, () => {
-    console.log(`app is listening on http://localhost:${PORT}`);
-})
+async function start() {
+    try {
+        await mongoose.connect(process.env.MONGO_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        })
+        app.listen(PORT, () => {
+            console.log(`app is listening on ${PORT}`);
+        })
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+start()
