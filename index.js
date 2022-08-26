@@ -2,11 +2,14 @@ const PORT = '3300'
 
 const express = require('express')
 const cors = require('cors')
+const authRouter = require('./authRouter')
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
+
+app.use('/auth', authRouter)
 
 const { connectMongo } = require('./mongo/mongo')
 connectMongo()
@@ -19,8 +22,8 @@ app.get('/recipes/get-by-str-request', recipeFuncs.getByStr)
 
 
 const userFuncs = require('./functions/users')
-app.post('/users/register', userFuncs.registerUser)
-app.post('/users/auth', userFuncs.authentificateUser)
+// app.post('/users/register', userFuncs.registerUser)
+// app.post('/users/auth', userFuncs.authentificateUser)
 
 
 app.listen(PORT, () => {
