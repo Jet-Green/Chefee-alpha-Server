@@ -4,6 +4,7 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser')
 const mongoose = require('mongoose');
 const router = require('./router/index')
+const errorMiddleware = require('./middleware/error-middleware')
 
 const app = express()
 
@@ -12,6 +13,9 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use('/api', router)
+
+// включаем последним
+app.use(errorMiddleware)
 
 const PORT = process.env.PORT || '3300'
 
