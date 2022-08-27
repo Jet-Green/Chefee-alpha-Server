@@ -12,12 +12,14 @@ class UserService {
             throw new Error(`Пользователь с почтой ${email} уже существует`)
         }
 
-        const hashPassword = bcrypt.hash(password, 3)
+        const hashPassword = await bcrypt.hash(password, 3)
         const activationLink = uuid.v4()
+
         const user = await UserModel.create({ email, password: hashPassword, activationLink })
-        await mailService.sendMail(email, activationLink)
+        // await mailService.sendMail(email, activationLink)
 
         const userDto = new UserDto(user);
+        console.log(userDto)
         const tokens = tokenService.generateTokens({ ...userDto })
         await tokenService.saveToken(userDto.id, tokens.refreshToken);
         return {

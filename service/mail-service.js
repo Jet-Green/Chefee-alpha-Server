@@ -1,7 +1,5 @@
 class MailService {
-    async sendActivationMail(to, link) {
-        return;
-    }
+    async sendActivationMail(to, link) { }
 }
 
 module.exports = new MailService();
