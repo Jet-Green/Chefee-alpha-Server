@@ -97,12 +97,39 @@ const recipes = [
     },
 ]
 
+const RecipeService = require('../service/recipe-service')
+
 module.exports = {
-    getAll(req, res, next) {
+    async getAll(req, res, next) {
         try {
-            return res.json(recipes)
+            return res.json(await RecipeService.findMany())
         } catch (error) {
             next(error);
         }
-    }
+    },
+    async getById(req, res, next) {
+        try {
+            const _id = req.query.id
+            return res.json(await RecipeService.findById(_id));
+        } catch (error) {
+            next(error);
+        }
+    },
+    insertOne(req, res, next) {
+        try {
+            RecipeService.insertOne()
+        } catch (error) {
+            next(error);
+        }
+    },
+    changeRating(req, res, next) {
+        try {
+            const { id, item, action } = req.body;
+
+            console.log({ id, item, action });
+        } catch (error) {
+            next(error);
+        }
+    },
+
 }
