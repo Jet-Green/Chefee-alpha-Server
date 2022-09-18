@@ -6,7 +6,8 @@ const tokenService = require('./token-service');
 const UserDto = require('../dtos/user-dto');
 const ApiError = require('../exceptions/api-error');
 
-class UserService {
+
+module.exports = {
     async registration(email, password) {
         const candidate = await UserModel.findOne({ email })
         if (candidate) {
@@ -28,7 +29,7 @@ class UserService {
             ...tokens,
             user: userDto
         }
-    }
+    },
 
     async activate(activationLink) {
         const user = await UserModel.findOne({ activationLink })
@@ -39,7 +40,7 @@ class UserService {
 
         user.isActivated = true;
         await user.save()
-    }
+    },
 
     async login(email, password) {
         const user = await UserModel.findOne({ email })
@@ -62,13 +63,13 @@ class UserService {
             ...tokens,
             user: userDto
         }
-    }
+    },
 
     async logout(refreshToken) {
         const token = await tokenService.removeToken(refreshToken);
 
         return token;
-    }
+    },
 
     async refresh(refreshToken) {
         if (!refreshToken) {
@@ -91,13 +92,11 @@ class UserService {
             ...tokens,
             user: userDto
         }
-    }
+    },
 
     async getAllUsers() {
         const users = await UserModel.find()
 
         return users;
-    }
+    },
 }
-
-module.exports = new UserService()

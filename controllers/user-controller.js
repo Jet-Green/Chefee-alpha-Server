@@ -2,7 +2,9 @@ const userService = require('../service/user-service')
 const { validationResult } = require('express-validator');
 const ApiError = require('../exceptions/api-error');
 
-class UserController {
+
+
+module.exports = {
     async registration(req, res, next) {
         try {
             const errors = validationResult(req);
@@ -19,7 +21,7 @@ class UserController {
             // попадаем в middleware с обработкой ошибок
             next(error)
         }
-    }
+    },
 
     async login(req, res, next) {
         try {
@@ -33,7 +35,7 @@ class UserController {
             // попадаем в middleware с обработкой ошибок
             next(error)
         }
-    }
+    },
 
     async logout(req, res, next) {
         try {
@@ -46,7 +48,7 @@ class UserController {
             // попадаем в middleware с обработкой ошибок
             next(error)
         }
-    }
+    },
 
     async activate(req, res, next) {
         try {
@@ -58,7 +60,7 @@ class UserController {
             // попадаем в middleware с обработкой ошибок
             next(error)
         }
-    }
+    },
 
     async refresh(req, res, next) {
         try {
@@ -71,7 +73,7 @@ class UserController {
             // попадаем в middleware с обработкой ошибок
             next(error)
         }
-    }
+    },
 
     async getUsers(req, res, next) {
         try {
@@ -84,5 +86,3 @@ class UserController {
         }
     }
 }
-
-module.exports = new UserController()
