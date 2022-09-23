@@ -122,11 +122,10 @@ module.exports = {
             next(error);
         }
     },
-    changeRating(req, res, next) {
+    async changeRating(req, res, next) {
         try {
-            const { id, item, action } = req.body;
-
-            console.log({ id, item, action });
+            const { _id, item, action, userEmail } = req.body;
+            return res.json(await RecipeService.changeRating(_id, item, action))
         } catch (error) {
             next(error);
         }
