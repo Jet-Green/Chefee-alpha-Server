@@ -10,6 +10,7 @@ const RecipeShema = new Schema({
     portions: { type: Number, required: true },
     time: { type: String, required: true },
     likes: { type: Number, required: true },
+    likedBy: [{ email: String }],
     reposts: { type: Number, required: true },
     comments: { type: Number, required: true },
     firstComment: { type: Object, required: false },
