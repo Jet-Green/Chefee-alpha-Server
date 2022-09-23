@@ -27,6 +27,10 @@ module.exports = {
                     'likedBy': { email: userEmail }
                 }
             }
+        } else if (item == 'reposts') {
+            modify.$inc = {
+                reposts: 1
+            }
         }
         return RecipeModel.findOneAndUpdate({ _id }, modify).exec()
     },
@@ -34,6 +38,7 @@ module.exports = {
         RecipeModel.deleteMany({}).then((r) => {
             console.log(r);
         })
+        return;
     },
 
     async insertOne() {
