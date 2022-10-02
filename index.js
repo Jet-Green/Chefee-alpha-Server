@@ -16,6 +16,12 @@ app.use(cors({
 app.use(express.json())
 app.use(cookieParser())
 
+app.use(express.static('dist'))
+
+app.get('/', (req, res) => {
+    res.send('hello world')
+})
+
 app.use('/api', router)
 app.use('/api/recipes', recipesRouter)
 
