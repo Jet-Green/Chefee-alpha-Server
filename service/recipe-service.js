@@ -56,11 +56,11 @@ module.exports = {
             ],
             portions: 4,
             time: "1 ч 30 минут",
-            likes: 2,
+            likes: 1,
             likedBy: [
-                {
-                    email: "grishadzyin@gmail.com"
-                },
+                // {
+                //     email: "grishadzyin@gmail.com"
+                // },
                 {
                     email: "smbd@gmail.com"
                 }
