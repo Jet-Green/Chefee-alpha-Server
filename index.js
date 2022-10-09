@@ -7,7 +7,12 @@ const router = require('./router/index')
 const recipesRouter = require('./router/recipes-router')
 const errorMiddleware = require('./middleware/error-middleware')
 
+const history = require('connect-history-api-fallback');
+
 const app = express()
+
+app.use(history())
+app.use(express.static('dist'))
 
 app.use(cors({
     credentials: true,
