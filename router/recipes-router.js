@@ -7,6 +7,7 @@ const authMiddleware = require('../middleware/auth-middleware')
 router.get('/get-all', recipesController.getAll)
 router.get('/get', recipesController.getById)
 router.get('/get-by-str', recipesController.getAll)
+router.get('/get-by-str-request', recipesController.findByString)
 router.post('/change-rating', authMiddleware, recipesController.changeRating)
 // использовать это, чтобы добавить тестовые рецепты
 router.get('/test-insert', recipesController.insertOne)

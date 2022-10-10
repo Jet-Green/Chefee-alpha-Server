@@ -115,6 +115,14 @@ module.exports = {
             next(error);
         }
     },
+    async findByString(req, res, next) {
+        try {
+            let q = req.query.request;
+            return res.json(await RecipeService.findByString(q))
+        } catch (error) {
+            next(error)
+        }
+    },
     insertOne(req, res, next) {
         try {
             RecipeService.insertOne()

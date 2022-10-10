@@ -8,6 +8,14 @@ module.exports = {
     async findById(_id) {
         return RecipeModel.findById(_id).exec()
     },
+    async findByString(q) {
+        return RecipeModel.find({
+            'ingredients.name': {
+                '$regex': q,
+                '$options': 'i'
+            }
+        }).exec()
+    },
     async changeRating(_id, item, action, userEmail) {
         let modify = { $inc: {}, }
 
