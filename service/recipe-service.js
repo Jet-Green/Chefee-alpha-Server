@@ -20,7 +20,6 @@ module.exports = {
                 '$options': 'i'
             }
         }
-        console.log(query);
         return RecipeModel.find(query).exec()
     },
     async changeRating(_id, item, action, userEmail) {
