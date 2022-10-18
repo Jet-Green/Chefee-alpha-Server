@@ -117,7 +117,7 @@ module.exports = {
     },
     async findByString(req, res, next) {
         try {
-            let q = req.query.request;
+            let q = req.query.request.split(',');
             return res.json(await RecipeService.findByString(q))
         } catch (error) {
             next(error)

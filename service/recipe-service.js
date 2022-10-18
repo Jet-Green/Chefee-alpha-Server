@@ -9,12 +9,19 @@ module.exports = {
         return RecipeModel.findById(_id).exec()
     },
     async findByString(q) {
-        return RecipeModel.find({
+        let query = {
             'ingredients.name': {
+                '$or': []
+            }
+        }
+        for (let i = 0; i < q.length; i++) {
+            query['ingredients.name']['$or'][i] = {
                 '$regex': q,
                 '$options': 'i'
             }
-        }).exec()
+        }
+        console.log(query);
+        return RecipeModel.find(query).exec()
     },
     async changeRating(_id, item, action, userEmail) {
         let modify = { $inc: {}, }
