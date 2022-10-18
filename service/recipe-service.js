@@ -48,6 +48,26 @@ module.exports = {
         }
         return RecipeModel.findOneAndUpdate({ _id }, modify).exec()
     },
+    async like(_id, action, userEmail) {
+        let query = { '$inc': {} }
+        if (action == 'inc') {
+            query['$inc'] = {
+                likes: 1
+            }
+            query['$push'] = {
+                'likedBy': { email: userEmail }
+            }
+        } else {
+            query['$inc'] = {
+                likes: -1
+            }
+            query['$pull'] = {
+                'likedBy': { email: userEmail }
+            }
+        }
+
+        return RecipeModel.findOneAndUpdate({ _id }, query).exec()
+    },
     async deleteAll() {
         RecipeModel.deleteMany({}).then((r) => {
             console.log(r);

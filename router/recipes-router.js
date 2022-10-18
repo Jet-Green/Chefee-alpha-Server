@@ -8,9 +8,9 @@ router.get('/get-all', recipesController.getAll)
 router.get('/get', recipesController.getById)
 router.get('/get-by-str', recipesController.getAll)
 router.get('/get-by-str-request', recipesController.findByString)
-router.post('/change-rating', authMiddleware, recipesController.changeRating)
+router.post('/like', authMiddleware, recipesController.like)
 // использовать это, чтобы добавить тестовые рецепты
-router.get('/test-insert', recipesController.insertOne)
+// router.get('/test-insert', recipesController.insertOne)
 // router.get('/test-delete-all', recipesController.deleteAll)
 
 module.exports = router;

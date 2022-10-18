@@ -142,4 +142,14 @@ module.exports = {
         }
     },
 
+    async like(req, res, next) {
+        try {
+            const { _id, action, userEmail } = req.body;
+            return res.json(await RecipeService.like(_id, action, userEmail));
+        } catch (error) {
+            console.log(error);
+            next(error);
+        }
+    },
+
 }
