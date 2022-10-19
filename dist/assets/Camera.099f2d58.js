@@ -1,1 +1,0 @@
-import{o as t,q as a,v as e}from"./index.1d575b35.js";const c=e("h1",null,"camera",-1),o=e("input",{type:"file",id:"camera",capture:"user",accept:"image/*"},null,-1),s=[c,o],i={__name:"Camera",setup(r){return(n,_)=>(t(),a("div",null,s))}};export{i as default};
