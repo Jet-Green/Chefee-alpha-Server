@@ -12,6 +12,7 @@ const RecipeShema = new Schema({
     likes: { type: Number, required: true },
     likedBy: [{ email: String }],
     reposts: { type: Number, required: true },
+    sharedBy: [{ email: String }],
     comments: { type: Number, required: true },
     firstComment: { type: Object, required: false },
     steps: { type: Object, required: true },

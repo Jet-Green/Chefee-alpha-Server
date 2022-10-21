@@ -22,32 +22,32 @@ module.exports = {
         }
         return RecipeModel.find(query).exec()
     },
-    async changeRating(_id, item, action, userEmail) {
-        let modify = { $inc: {}, }
+    // async changeRating(_id, item, action, userEmail) {
+    //     let modify = { $inc: {}, }
 
-        if (item == 'likes') {
-            if (action == 'incr') {
-                modify.$inc = {
-                    likes: 1
-                }
-                modify.$push = {
-                    'likedBy': { email: userEmail }
-                }
-            } else {
-                modify.$inc = {
-                    likes: -1
-                }
-                modify.$pull = {
-                    'likedBy': { email: userEmail }
-                }
-            }
-        } else if (item == 'reposts') {
-            modify.$inc = {
-                reposts: 1
-            }
-        }
-        return RecipeModel.findOneAndUpdate({ _id }, modify).exec()
-    },
+    //     if (item == 'likes') {
+    //         if (action == 'incr') {
+    //             modify.$inc = {
+    //                 likes: 1
+    //             }
+    //             modify.$push = {
+    //                 'likedBy': { email: userEmail }
+    //             }
+    //         } else {
+    //             modify.$inc = {
+    //                 likes: -1
+    //             }
+    //             modify.$pull = {
+    //                 'likedBy': { email: userEmail }
+    //             }
+    //         }
+    //     } else if (item == 'reposts') {
+    //         modify.$inc = {
+    //             reposts: 1
+    //         }
+    //     }
+    //     return RecipeModel.findOneAndUpdate({ _id }, modify).exec()
+    // },
     async like(_id, action, userEmail) {
         let query = { '$inc': {} }
         if (action == 'inc') {
@@ -67,6 +67,18 @@ module.exports = {
         }
 
         return RecipeModel.findOneAndUpdate({ _id }, query).exec()
+    },
+    async share(_id, userEmail) {
+        return RecipeModel.findByIdAndUpdate({ _id }, {
+            '$inc': {
+                reposts: 1
+            },
+            '$push': {
+                sharedBy: {
+                    email: userEmail
+                }
+            }
+        })
     },
     async deleteAll() {
         RecipeModel.deleteMany({}).then((r) => {

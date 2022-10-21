@@ -133,23 +133,31 @@ module.exports = {
     deleteAll() {
         RecipeService.deleteAll()
     },
-    async changeRating(req, res, next) {
-        try {
-            const { _id, item, action, userEmail } = req.body;
-            return res.json(await RecipeService.changeRating(_id, item, action, userEmail));
-        } catch (error) {
-            next(error);
-        }
-    },
+    // async changeRating(req, res, next) {
+    //     try {
+    //         const { _id, item, action, userEmail } = req.body;
+    //         return res.json(await RecipeService.changeRating(_id, item, action, userEmail));
+    //     } catch (error) {
+    //         next(error);
+    //     }
+    // },
 
     async like(req, res, next) {
         try {
             const { _id, action, userEmail } = req.body;
             return res.json(await RecipeService.like(_id, action, userEmail));
         } catch (error) {
-            console.log(error);
             next(error);
         }
     },
+
+    async share(request, res, next) {
+        try {
+            const { _id, userEmail } = request.body;
+            return res.json(await RecipeService.share(_id, userEmail));
+        } catch (error) {
+            next(error)
+        }
+    }
 
 }
