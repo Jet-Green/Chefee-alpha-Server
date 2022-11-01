@@ -1,15 +1,15 @@
 module.exports = [
     {
-        author: 'Cefee',
+        author: 'Chefee',
         title: "Оякодон",
         previewImage: 'https://www.gastronom.ru/binfiles/images/20160428/b2204fbc.jpg',
         ingredients: [
             { name: 'Круглозёрный Рис', amount: '2 пакетика по 80 г' },
-            { name: 'Соевый соус', amount: '4 ст. л.' },
-            { name: 'Репчатый лук', amount: '1' },
-            { name: 'Куриное яйцо', amount: '5' },
-            { name: 'Мирин (или полусладкое белое вино)', amount: '4 ст. л.' },
-            { name: 'Ростки сои' }
+            { name: 'Соевый соус', amount: '4 столовых ложек' },
+            { name: 'Репчатый лук', amount: '1 головка' },
+            { name: 'Куриное яйцо', amount: '5 штук' },
+            { name: 'Мирин (или полусладкое белое вино)', amount: '4 столовые ложки' },
+            { name: 'Ростки сои', amount: '' }
         ],
         portions: 4,
         time: "1 ч 30 минут",
@@ -48,282 +48,326 @@ module.exports = [
         }
     },
     {
-        author: 'Cefee',
-        title: "",
-        previewImage: '',
+        author: 'Chefee',
+        title: "Спагетти карбонара с красным луком",
+        previewImage: 'https://www.chefmarket.ru/blog/wp-content/uploads/2021/06/carbonara-pasta-2000x1200.jpg',
         ingredients: [
-            { name: '', amount: '' },
+            { name: 'Спагетти', amount: '250 г' },
+            { name: 'Сливочное масло', amount: '20 г' },
+            { name: 'Чеснок', amount: '2 зубчика' },
+            { name: 'Красный лук', amount: '1 головка' },
+            { name: 'Бекон', amount: '50 г' },
+            { name: 'Сливки 20%-ые', amount: '200 мл' },
+            { name: 'Тертый сыр пармезан', amount: '50 г' },
+            { name: 'Куриное яйцо', amount: '4 штуки' },
+            { name: 'Соль', amount: 'по вкусу' },
+            { name: 'Молотый черный перец', amount: 'по вкусу' },
         ],
-        portions: 0,
-        time: "",
+        portions: 2,
+        time: "20 минут",
         likes: 0,
-        likedBy: [
-            {
-                email: ""
-            },
-        ],
+        likedBy: [],
         reposts: 0,
         comments: [],
         steps: [
             {
-                image: '',
-                description: ''
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/110810174633/170313205756/p_O.png',
+                description: 'Вскипятите воду в большой кастрюле и сварите пасту до состояния аль денте. Обычно для этого нужно варить ее на минуту меньше, чем указано на пачке.'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/110810174633/170313205757/p_O.png',
+                description: 'Пока паста варится, растопите на сковороде масло и обжарьте на нем мелко нарезанные лук, чеснок и бекон. До мягкости и до отчетливого чесночного и жаренобеконного запаха.'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/110810174633/1703132057570/p_O.png',
+                description: 'Снимите сковороду с огня и в глубокой миске взбейте четыре яичных желтка со сливками и тертым пармезаном. Посолите и поперчите смесь, еще раз взбейте.'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/110810174633/170313205758/p_O.png',
+                description: 'В готовые спагетти вывалите обжаренные с луком и чесноком кусочки бекона. Влейте смесь сливок, желтков и пармезана, перемешайте. И сразу подавайте, посыпав свеженатертым сыром и черным молотым перцем.'
             },
         ],
-        description: "",
+        description: "Спагетти карбонара — хоть блюдо и итальянское, оно имеет хорошую популярность во всем мире, в том числе и у нас. Изобретенная когда-то простыми шахтерами, эта простая и сытная паста завоевала сердца и желудки многих. Для карбонары нужно выбирать такие ломтики бекона, где больше мяса и меньше жира. Если его будет много, то, вытапливаясь при готовке, он сделает пасту слишком тяжелой. Можно подавить чеснок и бросить в поджарку. Но, чтобы блюдо приобрело утонченный, еле уловимый аромат, достаточно потомить ломтики чеснока в масле и убрать из сковороды спустя пару минут. Не обязательно использовать в рецепте карбонары спагетти — выбирайте любимые макароны из 500 видов всевозможной пасты. Но только из твердых сортов пшеницы.",
         health: {
-            protein: 25.8,
-            fat: 14.9,
-            carbohydrates: 67,
-            kcal: 530.6
+            protein: 46,
+            fat: 61,
+            carbohydrates: 102,
+            kcal: 1158
         }
     },
     {
-        author: 'Cefee',
-        title: "",
-        previewImage: '',
+        author: 'Chefee',
+        title: "Лазанья классическая с мясом",
+        previewImage: 'https://s1.eda.ru/StaticContent/Photos/120131082527/130715011534/p_O.jpg',
         ingredients: [
-            { name: '', amount: '' },
+            { name: 'Мясной фарш', amount: '600 г' },
+            { name: 'Соус болоньезе', amount: '600 г' },
+            { name: 'Сливочное масло', amount: '60 г' },
+            { name: 'Пшеничная мука', amount: '2,5 столовые ложки' },
+            { name: 'Оливковое масло', amount: '2 столовые ложки' },
+            { name: 'Молоко', amount: '750 мл' },
+            { name: 'Готовые сухие листы лазаньи', amount: '10 штук' },
+            { name: 'Твердый сыр', amount: '500 г' },
         ],
-        portions: 0,
-        time: "",
+        portions: 6,
+        time: "40 минут",
         likes: 0,
-        likedBy: [
-            {
-                email: ""
-            },
-        ],
+        likedBy: [],
         reposts: 0,
         comments: [],
         steps: [
             {
-                image: '',
-                description: ''
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/151031004547/151106181107/p_O.jpg',
+                description: 'В сотейник положить сливочное масло и 2 ложки растительного масла, растопить. Постепенно добавлять муку и размешивать так, чтобы не оставалось комочков.'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/151031004547/151106181110/p_O.jpg',
+                description: 'Когда вся мука вмешана, влить все молоко. Убавить огонь и томить до нужной консистенции: не жидкой, но и не слишком густой. Консистенция нежирной сметаны.'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/151031004547/151106181111/p_O.jpg',
+                description: 'На сковороде раскалить оливковое масло. Добавить мясной фарш (лучше свинина+телятина).'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/151031004547/151106181113/p_O.jpg',
+                description: 'Фарш жарить до полуготовности. Влить в него соус болоньезе, посолить и поперчить по вкусу.'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/151031004547/151106181115/p_O.jpg',
+                description: 'Духовку разогреть до 180 градусов. Форму смазать сливочным маслом. На дно вылить немного соуса бешамель, чуть-чуть, только чтобы покрыть дно.'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/151031004547/151106181116/p_O.jpg',
+                description: 'Выложить пласты (не вареные). На пласты выложить получившийся фарш (не жалеем!), на фарш — натертый сыр. На сыр — соус бешамель.'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/151031004547/151106181117/p_O.jpg',
+                description: 'Соуса нужно выкладывать столько, сколько необходимо, на ваш взгляд, чтобы лазанья получилась сочной. Поверх соуса выложить сухие листы лазаньи. Повторить процедуру.'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/151031004547/151106181119/p_O.jpg',
+                description: 'Последний слой листов промазать соусом бешамель и сверху щедро засыпать сыром. Дать постоять минут 7–10. Поставить в духовку. Печь 30 минут.'
             },
         ],
         description: "",
         health: {
-            protein: 25.8,
-            fat: 14.9,
-            carbohydrates: 67,
-            kcal: 530.6
+            protein: 50,
+            fat: 73,
+            carbohydrates: 24,
+            kcal: 965
         }
     },
     {
-        author: 'Cefee',
-        title: "",
-        previewImage: '',
+        author: 'Chefee',
+        title: "Сырники из творога",
+        previewImage: 'https://www.maggi.ru/data/images/recept/img640x500/recept_29027_yojk.jpg',
         ingredients: [
-            { name: '', amount: '' },
+            { name: 'Творог', amount: '350 г' },
+            { name: 'Куриное яйцо', amount: '2 штуки' },
+            { name: 'Пшеничная мука', amount: '6 столовых ложек' },
+            { name: 'Сахар', amount: '2 столовые ложки' },
+            { name: 'Подсолнечное масло', amount: '5 столовых ложек' },
         ],
-        portions: 0,
-        time: "",
+        portions: 2,
+        time: "30 минут",
         likes: 0,
-        likedBy: [
-            {
-                email: ""
-            },
-        ],
+        likedBy: [],
         reposts: 0,
         comments: [],
         steps: [
             {
-                image: '',
-                description: ''
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/110811142241/170314165129/p_O.png',
+                description: 'Положите весь творог в кастрюльку и разомните его вилкой так, чтобы в нем не осталось крупных комков. Разбейте в него яйца, всыпьте сахар и тщательно все перемешайте. Лучше не использовать слишком сухой или слишком влажный творог, иначе сырники будут разваливаться в процессе приготовления.'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/110811142241/1703141651290/p_O.png',
+                description: 'Всыпьте в творог 5 столовых ложек (с горкой) муки и тщательно перемешайте. Можно добавить немного больше муки, сырники получатся тогда более плотными. Или муки можно добавить чуть меньше, и тогда сырники будут нежнее. В итоге у вас должна получиться однородная масса, из которой можно будет лепить сырники.'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/110811142241/170314165130/p_O.png',
+                description: 'Поставьте сковороду на средний огонь и налейте в нее подсолнечное масло.'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/110811142241/1703141651300/p_O.png',
+                description: 'Насыпьте на тарелку немного муки. Слепите несколько небольших шариков из получившейся творожной массы и положите их на тарелку. Лучше лепить разом 4–5 шариков — столько, сколько поместится одновременно на сковороду. Затем по очереди обкатывайте творожные шарики в муке, плющите их в небольшие лепешки (они не должны быть слишком тонкие) и выкладывайте на сковороду.'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/110811142241/170314165131/p_O.png',
+                description: 'Обжаривайте сырники 1–2 минуты до появления золотистой корочки. Затем переверните их на другую сторону и также обжарьте до золотистого состояния.'
+            },
+            {
+                image: 'https://eda.ru/img/eda/c434x295/s1.eda.ru/StaticContent/Photos/110811142241/1703141651310/p_O.png',
+                description: 'Повторяйте, пока творог не закончится.'
             },
         ],
-        description: "",
+        description: "Главный секрет идеальных сырников — а точнее творожников, — творог нужно протереть через мелкое сито и отжать от влаги. Жирность предпочтительна не больше и не меньше 9%. Тесто должно получиться эластичным, чтобы при надавливании сырник не треснул на сковородке, а сохранил форму. Если все сделать правильно, получатся нежные однородные кругляшки под плотной румяной корочкой. Сырники можно запекать в духовке или готовить на пару. В рецепте не исключаются эксперименты с начинкой — сухофрукты, орехи, свежие фрукты и даже картофель лишними не будут. Приятного аппетита!",
         health: {
-            protein: 25.8,
-            fat: 14.9,
-            carbohydrates: 67,
-            kcal: 530.6
+            protein: 42,
+            fat: 61,
+            carbohydrates: 56,
+            kcal: 938
         }
     },
-    {
-        author: 'Cefee',
-        title: "",
-        previewImage: '',
-        ingredients: [
-            { name: '', amount: '' },
-        ],
-        portions: 0,
-        time: "",
-        likes: 0,
-        likedBy: [
-            {
-                email: ""
-            },
-        ],
-        reposts: 0,
-        comments: [],
-        steps: [
-            {
-                image: '',
-                description: ''
-            },
-        ],
-        description: "",
-        health: {
-            protein: 25.8,
-            fat: 14.9,
-            carbohydrates: 67,
-            kcal: 530.6
-        }
-    },
-    {
-        author: 'Cefee',
-        title: "",
-        previewImage: '',
-        ingredients: [
-            { name: '', amount: '' },
-        ],
-        portions: 0,
-        time: "",
-        likes: 0,
-        likedBy: [
-            {
-                email: ""
-            },
-        ],
-        reposts: 0,
-        comments: [],
-        steps: [
-            {
-                image: '',
-                description: ''
-            },
-        ],
-        description: "",
-        health: {
-            protein: 25.8,
-            fat: 14.9,
-            carbohydrates: 67,
-            kcal: 530.6
-        }
-    },
-    {
-        author: 'Cefee',
-        title: "",
-        previewImage: '',
-        ingredients: [
-            { name: '', amount: '' },
-        ],
-        portions: 0,
-        time: "",
-        likes: 0,
-        likedBy: [
-            {
-                email: ""
-            },
-        ],
-        reposts: 0,
-        comments: [],
-        steps: [
-            {
-                image: '',
-                description: ''
-            },
-        ],
-        description: "",
-        health: {
-            protein: 25.8,
-            fat: 14.9,
-            carbohydrates: 67,
-            kcal: 530.6
-        }
-    },
-    {
-        author: 'Cefee',
-        title: "",
-        previewImage: '',
-        ingredients: [
-            { name: '', amount: '' },
-        ],
-        portions: 0,
-        time: "",
-        likes: 0,
-        likedBy: [
-            {
-                email: ""
-            },
-        ],
-        reposts: 0,
-        comments: [],
-        steps: [
-            {
-                image: '',
-                description: ''
-            },
-        ],
-        description: "",
-        health: {
-            protein: 25.8,
-            fat: 14.9,
-            carbohydrates: 67,
-            kcal: 530.6
-        }
-    },
-    {
-        author: 'Cefee',
-        title: "",
-        previewImage: '',
-        ingredients: [
-            { name: '', amount: '' },
-        ],
-        portions: 0,
-        time: "",
-        likes: 0,
-        likedBy: [
-            {
-                email: ""
-            },
-        ],
-        reposts: 0,
-        comments: [],
-        steps: [
-            {
-                image: '',
-                description: ''
-            },
-        ],
-        description: "",
-        health: {
-            protein: 25.8,
-            fat: 14.9,
-            carbohydrates: 67,
-            kcal: 530.6
-        }
-    },
-    {
-        author: 'Cefee',
-        title: "",
-        previewImage: '',
-        ingredients: [
-            { name: '', amount: '' },
-        ],
-        portions: 0,
-        time: "",
-        likes: 0,
-        likedBy: [
-            {
-                email: ""
-            },
-        ],
-        reposts: 0,
-        comments: [],
-        steps: [
-            {
-                image: '',
-                description: ''
-            },
-        ],
-        description: "",
-        health: {
-            protein: 25.8,
-            fat: 14.9,
-            carbohydrates: 67,
-            kcal: 530.6
-        }
-    },
+    // {
+    //     author: 'Chefee',
+    //     title: "",
+    //     previewImage: '',
+    //     ingredients: [
+    //         { name: '', amount: '' },
+    //     ],
+    //     portions: 0,
+    //     time: "",
+    //     likes: 0,
+    //     likedBy: [],
+    //     reposts: 0,
+    //     comments: [],
+    //     steps: [
+    //         {
+    //             image: '',
+    //             description: ''
+    //         },
+    //     ],
+    //     description: "",
+    //     health: {
+    //         protein: 25.8,
+    //         fat: 14.9,
+    //         carbohydrates: 67,
+    //         kcal: 530.6
+    //     }
+    // },
+    // {
+    //     author: 'Chefee',
+    //     title: "",
+    //     previewImage: '',
+    //     ingredients: [
+    //         { name: '', amount: '' },
+    //     ],
+    //     portions: 0,
+    //     time: "",
+    //     likes: 0,
+    //     likedBy: [],
+    //     reposts: 0,
+    //     comments: [],
+    //     steps: [
+    //         {
+    //             image: '',
+    //             description: ''
+    //         },
+    //     ],
+    //     description: "",
+    //     health: {
+    //         protein: 25.8,
+    //         fat: 14.9,
+    //         carbohydrates: 67,
+    //         kcal: 530.6
+    //     }
+    // },
+    // {
+    //     author: 'Chefee',
+    //     title: "",
+    //     previewImage: '',
+    //     ingredients: [
+    //         { name: '', amount: '' },
+    //     ],
+    //     portions: 0,
+    //     time: "",
+    //     likes: 0,
+    //     likedBy: [],
+    //     reposts: 0,
+    //     comments: [],
+    //     steps: [
+    //         {
+    //             image: '',
+    //             description: ''
+    //         },
+    //     ],
+    //     description: "",
+    //     health: {
+    //         protein: 25.8,
+    //         fat: 14.9,
+    //         carbohydrates: 67,
+    //         kcal: 530.6
+    //     }
+    // },
+    // {
+    //     author: 'Chefee',
+    //     title: "",
+    //     previewImage: '',
+    //     ingredients: [
+    //         { name: '', amount: '' },
+    //     ],
+    //     portions: 0,
+    //     time: "",
+    //     likes: 0,
+    //     likedBy: [],
+    //     reposts: 0,
+    //     comments: [],
+    //     steps: [
+    //         {
+    //             image: '',
+    //             description: ''
+    //         },
+    //     ],
+    //     description: "",
+    //     health: {
+    //         protein: 25.8,
+    //         fat: 14.9,
+    //         carbohydrates: 67,
+    //         kcal: 530.6
+    //     }
+    // },
+    // {
+    //     author: 'Chefee',
+    //     title: "",
+    //     previewImage: '',
+    //     ingredients: [
+    //         { name: '', amount: '' },
+    //     ],
+    //     portions: 0,
+    //     time: "",
+    //     likes: 0,
+    //     likedBy: [],
+    //     reposts: 0,
+    //     comments: [],
+    //     steps: [
+    //         {
+    //             image: '',
+    //             description: ''
+    //         },
+    //     ],
+    //     description: "",
+    //     health: {
+    //         protein: 25.8,
+    //         fat: 14.9,
+    //         carbohydrates: 67,
+    //         kcal: 530.6
+    //     }
+    // },
+    // {
+    //     author: 'Chefee',
+    //     title: "",
+    //     previewImage: '',
+    //     ingredients: [
+    //         { name: '', amount: '' },
+    //     ],
+    //     portions: 0,
+    //     time: "",
+    //     likes: 0,
+    //     likedBy: [],
+    //     reposts: 0,
+    //     comments: [],
+    //     steps: [
+    //         {
+    //             image: '',
+    //             description: ''
+    //         },
+    //     ],
+    //     description: "",
+    //     health: {
+    //         protein: 25.8,
+    //         fat: 14.9,
+    //         carbohydrates: 67,
+    //         kcal: 530.6
+    //     }
+    // },
 ]
