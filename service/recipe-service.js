@@ -94,12 +94,12 @@ module.exports = {
             title: "Оякодон",
             previewImage: 'https://www.gastronom.ru/binfiles/images/20160428/b2204fbc.jpg',
             ingredients: [
-                { name: 'Круглозёрный Рис', amount: '2 пакетика по 80 г', youHave: false },
-                { name: 'Соевый соус', amount: '4 ст. л.', youHave: false },
-                { name: 'Репчатый лук', amount: '1', youHave: false },
-                { name: 'Куриное яйцо', amount: '5', youHave: false },
-                { name: 'Мирин (или полусладкое белое вино)', amount: '4 ст. л.', youHave: false },
-                { name: 'Ростки сои', youHave: false }
+                { name: 'Круглозёрный Рис', amount: '2 пакетика по 80 г' },
+                { name: 'Соевый соус', amount: '4 ст. л.' },
+                { name: 'Репчатый лук', amount: '1' },
+                { name: 'Куриное яйцо', amount: '5' },
+                { name: 'Мирин (или полусладкое белое вино)', amount: '4 ст. л.' },
+                { name: 'Ростки сои' }
             ],
             portions: 4,
             time: "1 ч 30 минут",
