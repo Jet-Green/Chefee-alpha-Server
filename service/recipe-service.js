@@ -10,15 +10,16 @@ module.exports = {
     },
     async findByString(q) {
         let query = {
-            'ingredients.name': {
-                '$or': []
-            }
+            '$or': [
+            ]
         }
         for (let i = 0; i < q.length; i++) {
-            query['ingredients.name']['$or'][i] = {
-                '$regex': q,
-                '$options': 'i'
-            }
+            query['$or'].push({
+                'ingredients.name': {
+                    '$regex': q[i],
+                    '$options': 'i'
+                }
+            })
         }
         return RecipeModel.find(query).exec()
     },
